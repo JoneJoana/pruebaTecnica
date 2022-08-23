@@ -34,12 +34,12 @@ public class MessageController {
 		return messageServiceImpl.findById(id);
 	}
 	
-	@GetMapping("/message/{player}")
+	@GetMapping("/message/player/{player}")
 	public List<Message> findPlayerFrom(@PathVariable(name = "player") Player player) {
 		return messageServiceImpl.findPlayerFrom(player);
 	}
 	
-	@GetMapping("/message/{party}")
+	@GetMapping("/message/party/{party}")
 	public List<Message> findfindByParty(@PathVariable(name = "party") Party party) {
 		return messageServiceImpl.findByParty(party);
 	}

@@ -55,7 +55,7 @@ public class PlayerController {
 	
 	@GetMapping("/player/friends")
 	public List<Player> getFriends(@RequestBody Player player) {
-		return playerServiceImpl.findByFriendsWith(player);
+		return playerServiceImpl.findByFriendsTo(player);
 	}
 		
 	@PostMapping("/player") // crear

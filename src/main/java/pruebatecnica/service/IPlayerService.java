@@ -22,7 +22,7 @@ public interface IPlayerService {
 	public Player findByNickname(String nickname);
 	
 	//devuelve lista de players amigos de ese player 
-	public List<Player> findByFriendsWith(Player player);
+	public List<Player> findByFriendsTo(Player player);
 	
 	public List<Player> findByParties(Party party);
 

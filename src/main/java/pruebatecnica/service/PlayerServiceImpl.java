@@ -46,8 +46,8 @@ public class PlayerServiceImpl implements IPlayerService{
 	}
 
 	@Override
-	public List<Player> findByFriendsWith(Player player) {
-		return iPlayerDao.findByFriendsWith(player);
+	public List<Player> findByFriendsTo(Player player) {
+		return iPlayerDao.findByFriendsTo(player);
 	}
 	
 	@Override

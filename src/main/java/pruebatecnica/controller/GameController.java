@@ -32,7 +32,7 @@ public class GameController {
 		return gameServiceImpl.findById(id);
 	}
 	
-	@GetMapping("/games/{title}")
+	@GetMapping("/games/title/{title}")
 	public Game findByTitle(@PathVariable(name = "title") String title) {
 		return gameServiceImpl.findByTitle(title);
 	}

@@ -45,10 +45,10 @@ public class PlayerServiceImpl implements IPlayerService{
 		return iPlayerDao.findByNickname(nickname);
 	}
 
-//	@Override
-//	public List<Player> getFriends(Player player) {
-//		return iPlayerDao.getFriends(player);
-//	}
+	@Override
+	public List<Player> findByFriendsWith(Player player) {
+		return iPlayerDao.findByFriendsWith(player);
+	}
 	
 	@Override
 	public List<Player> findByParties(Party party) {

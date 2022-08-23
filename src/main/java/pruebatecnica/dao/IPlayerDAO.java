@@ -13,8 +13,8 @@ public interface IPlayerDAO extends JpaRepository<Player,Integer>{
 	
 	public Player findByNickname(String nickname);
 	
-	//devuelve lista de players amigos de ese player 
-	//public List<Player> getFriends(Player player);	
+	//devuelve lista de players de los que ese player es amigo 
+	public List<Player> findByFriendsWith(Player player);	
 	
 	public List<Player> findByParties(Party party);
 	

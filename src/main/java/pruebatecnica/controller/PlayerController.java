@@ -53,10 +53,10 @@ public class PlayerController {
 		return playerServiceImpl.findByParties(party);
 	}
 	
-//	@GetMapping("/player/friends/{id}")
-//	public List<Player> getFriends(@PathVariable(name = "id") Player player) {
-//		return playerServiceImpl.getFriends(player);
-//	}
+	@GetMapping("/player/friends/{id}")
+	public List<Player> getFriends(@PathVariable(name = "id") Player player) {
+		return playerServiceImpl.findByFriendsWith(player);
+	}
 		
 	@PostMapping("/player") // crear
 	public String savePlayer(@RequestBody Player player) {

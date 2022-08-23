@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -34,11 +35,17 @@ public class Player {
 	private String email;
 	private String nickname;
 	
-//	//relacion recursiva?
-//	@JsonIgnore
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id")//la columna de player que hace ref a (otro)player
-//    private List<Player> friends;
+	//relacion recursiva
+	// what entities does this entity reference?
+	@JsonIgnore
+    @ManyToMany
+    private List<Player> friendsWith;
 	
+    // what entities is this entity referenced from?
+	@JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY,mappedBy="friendsWith")
+    private List<Player> friendsTo;
+
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "playerFrom")//la columna de message que hace ref a player
     private List<Message> messages;
@@ -94,13 +101,21 @@ public class Player {
 		this.nickname = nickname;
 	}
 
-//	public List<Player> getFriends() {
-//		return friends;
-//	}
-//
-//	public void setFriends(List<Player> friends) {
-//		this.friends = friends;
-//	}
+	public List<Player> getFriendsWith() {
+		return friendsWith;
+	}
+
+	public void setFriendsWith(List<Player> friendsWith) {
+		this.friendsWith = friendsWith;
+	}
+
+	public List<Player> getFriendsTo() {
+		return friendsTo;
+	}
+
+	public void setFriendsTo(List<Player> friendsTo) {
+		this.friendsTo = friendsTo;
+	}
 
 	public List<Message> getMessages() {
 		return messages;

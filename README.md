@@ -1,6 +1,8 @@
 # pruebaTecnica
 creacion API REST completa de un proyecto
 
+- rama prueba (sin party ni friends) funciona bien
+
 ## URL
 ```
 prueba-tecnica-joana.herokuapp.com

@@ -51,8 +51,8 @@ public class Player {
 	@JsonIgnore
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinTable(name = "member_parties", 
-			joinColumns = { @JoinColumn(name = "party") },
-			inverseJoinColumns = { @JoinColumn(name = "player") })
+			joinColumns = { @JoinColumn(name = "player") },
+			inverseJoinColumns = { @JoinColumn(name = "party") })
 	private List<Party> memberParties;
 
 	//Constructor

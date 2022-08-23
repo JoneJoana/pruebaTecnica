@@ -36,20 +36,20 @@ public class Player {
 	
 	//relacion recursiva?
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id")//la columna de player que hace ref a player
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id")//la columna de player que hace ref a (otro)player
     private List<Player> friends;
 	
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "from")//la columna de message que hace ref a player
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "playerFrom")//la columna de message que hace ref a player
     private List<Message> messages;
 	
-//	@JsonIgnore
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "owner")//la columna de party que hace ref a player owner
-//    private List<Party> ownedParties;
-//	
-//	@JsonIgnore
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "players")//la columna de party que hace ref a player
-//    private List<Party> parties;
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "owner")//la columna de party que hace ref a player owner
+    private List<Party> ownedParties;
+	
+	@JsonIgnore
+	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "players")//la columna de party que hace ref a player
+    private List<Party> parties;
 	
 
 	//Constructor
@@ -95,13 +95,13 @@ public class Player {
 		this.nickname = nickname;
 	}
 
-//	public List<Player> getFriends() {
-//		return friends;
-//	}
-//
-//	public void setFriends(List<Player> friends) {
-//		this.friends = friends;
-//	}
+	public List<Player> getFriends() {
+		return friends;
+	}
+
+	public void setFriends(List<Player> friends) {
+		this.friends = friends;
+	}
 
 	public List<Message> getMessages() {
 		return messages;
@@ -111,20 +111,20 @@ public class Player {
 		this.messages = messages;
 	}
 
-//	public List<Party> getOwnedParties() {
-//		return ownedParties;
-//	}
-//
-//	public void setOwnedParties(List<Party> ownedParties) {
-//		this.ownedParties = ownedParties;
-//	}
-//	
-//	public List<Party> getParties() {
-//		return parties;
-//	}
-//
-//	public void setParties(List<Party> parties) {
-//		this.parties = parties;
-//	}
+	public List<Party> getOwnedParties() {
+		return ownedParties;
+	}
+
+	public void setOwnedParties(List<Party> ownedParties) {
+		this.ownedParties = ownedParties;
+	}
+
+	public List<Party> getParties() {
+		return parties;
+	}
+
+	public void setParties(List<Party> parties) {
+		this.parties = parties;
+	}
 	
 }

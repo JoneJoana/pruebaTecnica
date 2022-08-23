@@ -23,24 +23,24 @@ public class Message {
 	private int id;
 	
 	@ManyToOne	
-	@JoinColumn(name = "player")
-	private Player from;
+	@JoinColumn(name = "playerFrom")
+	private Player playerFrom;
 	
 	private String message;	
 
 	@Temporal(TemporalType.DATE)
 	private Date dateSend;
 	
-//	@ManyToOne	
-//	@JoinColumn(name = "party")
-//	private Party party;
+	@ManyToOne	
+	@JoinColumn(name = "party")
+	private Party party;
 
 	
 	public Message() {}
 	
 	public Message(int id, Player from, String message) {
 		this.id = id;
-		this.from = from;
+		this.playerFrom = from;
 		this.message = message;
 		this.dateSend = new Date();
 	}
@@ -53,12 +53,12 @@ public class Message {
 		this.id = id;
 	}
 
-	public Player getFrom() {
-		return from;
+	public Player getplayerFrom() {
+		return playerFrom;
 	}
 
-	public void setFrom(Player from) {
-		this.from = from;
+	public void setplayerFrom(Player from) {
+		this.playerFrom = from;
 	}
 
 	public String getMessage() {
@@ -77,12 +77,12 @@ public class Message {
 		this.dateSend = dateSend;
 	}
 	
-//	public Party getParty() {
-//		return party;
-//	}
-//
-//	public void setParty(Party party) {
-//		this.party = party;
-//	}
+	public Party getParty() {
+		return party;
+	}
+
+	public void setParty(Party party) {
+		this.party = party;
+	}
 	
 }

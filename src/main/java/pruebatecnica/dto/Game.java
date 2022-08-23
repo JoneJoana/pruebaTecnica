@@ -23,9 +23,9 @@ public class Game {
 	private int id;
 	private String title;
 	
-//	@JsonIgnore
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "game")//la columna de party que hace ref a game
-//	private List<Party> parties;
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "game")//la columna de party que hace ref a game
+	private List<Party> parties;
 
 	//constructors
 	public Game() {}
@@ -52,12 +52,12 @@ public class Game {
 		this.title = title;
 	}
 
-//	public List<Party> getParties() {
-//		return parties;
-//	}
-//
-//	public void setParties(List<Party> parties) {
-//		this.parties = parties;
-//	}
+	public List<Party> getParties() {
+		return parties;
+	}
+
+	public void setParties(List<Party> parties) {
+		this.parties = parties;
+	}
 		
 }

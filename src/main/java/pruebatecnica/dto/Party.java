@@ -1,5 +1,6 @@
 package pruebatecnica.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -43,12 +44,21 @@ public class Party {
     private List<Message> messages;
 	
 	//creacion tabla intermedia entre player(members) i parties
-	@JsonIgnore
-	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinTable(name = "member_parties", 
 			joinColumns = { @JoinColumn(name = "party") },
 			inverseJoinColumns = { @JoinColumn(name = "player") })
-	private List<Player> partiesMembered;
+	
+	@JsonIgnore
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+	private List<Player> players;
+	
+	public void addMember(Player player){
+        if(this.players == null){
+            this.players = new ArrayList<>();
+        }
+        
+        this.players.add(player);
+    }
 	
 		
 	//constructors
@@ -102,12 +112,12 @@ public class Party {
 		this.messages = messages;
 	}
 	
-	public List<Player> getPartiesMembered() {
-		return partiesMembered;
+	public List<Player> getPlayers() {
+		return players;
 	}
 
-	public void setPartiesMembered(List<Player> players) {
-		this.partiesMembered = players;
+	public void setPlayers(List<Player> players) {
+		this.players = players;
 	}
 	
 }

@@ -16,6 +16,4 @@ public interface IPartyDAO extends JpaRepository<Party,Integer>{
 	
 	public List<Party> findByOwner(Player player);
 	
-	public List<Player> getMembers(Party party);
-
 }

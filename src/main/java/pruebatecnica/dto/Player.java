@@ -48,9 +48,8 @@ public class Player {
     private List<Party> ownedParties;
 	
 	@JsonIgnore
-	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "partiesMembered")//la columna de party que hace ref a player
-    private List<Party> partiesMembered;
-	
+	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "players")//la columna de party que hace ref a player 
+    private List<Party> parties;
 
 	//Constructor
 	public Player() {}
@@ -119,12 +118,12 @@ public class Player {
 		this.ownedParties = ownedParties;
 	}
 
-	public List<Party> getPartiesMembered() {
-		return partiesMembered;
+	public List<Party> getParties() {
+		return parties;
 	}
 
-	public void setPartiesMembered(List<Party> parties) {
-		this.partiesMembered = parties;
+	public void setParties(List<Party> parties) {
+		this.parties = parties;
 	}
 	
 }

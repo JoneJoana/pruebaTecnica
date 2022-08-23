@@ -23,5 +23,8 @@ public interface IPlayerService {
 	
 	//devuelve lista de players amigos de ese player 
 	//public List<Player> getFriends(Player player);
+	
+	public List<Player> findByParties(Party party);
+
 
 }

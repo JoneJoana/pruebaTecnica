@@ -51,9 +51,4 @@ public class PartyServiceImpl implements IPartyService{
 		return iPartyDao.findByOwner(player);
 	}
 
-	@Override
-	public List<Player> getMembers(Party party) {
-		return iPartyDao.getMembers(party);
-	}
-
 }

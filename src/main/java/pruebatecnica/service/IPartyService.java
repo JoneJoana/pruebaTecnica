@@ -23,6 +23,4 @@ public interface IPartyService {
 	
 	public List<Party> findByOwner(Player player);
 	
-	public List<Player> getMembers(Party party);
-
 }

@@ -1,82 +1,82 @@
-# pruebaTecnica
+# pruebaTecnica - rama test2 (correcta a falta implementar controller Party)
 creacion API REST completa de un proyecto
 
 ## URL
 ```
-prueba-tecnica-joana.herokuapp.com
+pruebatecnica-test2.herokuapp.com
 ```
-## Cadena conexion clearDB Heroku 
-mysql://bacf6c49ae30e8:76facb57@eu-cdbr-west-03.cleardb.net/heroku_92d868bc171719b?reconnect=true
+## Cadena conexion clearDB Heroku (apunto a la misma bbdd que rama prueba)
+mysql://be28341129a6ad:75a46995@eu-cdbr-west-03.cleardb.net/heroku_21096d0df0eb796?reconnect=true
 
 ## API GAME
 
 #### GET
 ```
-prueba-tecnica-joana.herokuapp.com/api/games
-prueba-tecnica-joana.herokuapp.com/api/games/{id}
-prueba-tecnica-joana.herokuapp.com/api/games/{title}
+pruebatecnica-test2.herokuapp.com/api/games
+pruebatecnica-test2.herokuapp.com/api/games/{id}
+pruebatecnica-test2.herokuapp.com/api/games/{title}
 ```
 
 #### POST
 ```
-prueba-tecnica-joana.herokuapp.com/api/games
+pruebatecnica-test2.herokuapp.com/api/games
 ```
 #### PUT
 ```
-prueba-tecnica-joana.herokuapp.com/api/games/{id}
+pruebatecnica-test2.herokuapp.com/api/games/{id}
 ```
 #### DELETE
 ```
-prueba-tecnica-joana.herokuapp.com/api/games/{id}
+pruebatecnica-test2.herokuapp.com/api/games/{id}
 ```
 
 ## API Message
 
 #### GET
 ```
-prueba-tecnica-joana.herokuapp.com/api/message
-prueba-tecnica-joana.herokuapp.com/api/message/{id}
-prueba-tecnica-joana.herokuapp.com/api/message/player/{player}
-prueba-tecnica-joana.herokuapp.com/api/message/party/{party}
+pruebatecnica-test2.herokuapp.com/api/message
+pruebatecnica-test2.herokuapp.com/api/message/{id}
+pruebatecnica-test2.herokuapp.com/api/message/player  - con body
+pruebatecnica-test2.herokuapp.com/api/message/party   - con body
 
 ```
 #### POST
 ```
-prueba-tecnica-joana.herokuapp.com/api/message
+pruebatecnica-test2.herokuapp.com/api/message
 ```
 #### PUT
 ```
-prueba-tecnica-joana.herokuapp.com/api/message/{id}
+pruebatecnica-test2.herokuapp.com/api/message/{id}
 ```
 #### DELETE
 ```
-prueba-tecnica-joana.herokuapp.com/api/message/{id}
+pruebatecnica-test2.herokuapp.com/api/message/{id}
 ```
 
 ## API Player
 #### GET
 ```
-prueba-tecnica-joana.herokuapp.com/api/player/
-prueba-tecnica-joana.herokuapp.com/api/player/{id}
-prueba-tecnica-joana.herokuapp.com/api/player/username/{username}
-prueba-tecnica-joana.herokuapp.com/api/player/nickname/{nickname}
-prueba-tecnica-joana.herokuapp.com/api/player/friends/{id}
-prueba-tecnica-joana.herokuapp.com/api/player/parties/{id}
+pruebatecnica-test2.herokuapp.com/api/player/
+pruebatecnica-test2.herokuapp.com/api/player/{id}
+pruebatecnica-test2.herokuapp.com/api/player/username/{username}
+pruebatecnica-test2.herokuapp.com/api/player/nickname/{nickname}
+pruebatecnica-test2.herokuapp.com/api/player/friends/   - con body
+pruebatecnica-test2.herokuapp.com/api/player/party/     - con body
 ```
 #### POST
 ```
-prueba-tecnica-joana.herokuapp.com/api/player
+pruebatecnica-test2.herokuapp.com/api/player
 ```
 #### PUT
 ```
-prueba-tecnica-joana.herokuapp.com/api/player/{id}
+pruebatecnica-test2.herokuapp.com/api/player/{id}
 ```
 #### DELETE
 ```
-prueba-tecnica-joana.herokuapp.com/api/player/{id}
+pruebatecnica-test2.herokuapp.com/api/player/{id}
 ```
 
-## API Party 
+## API Party - sin implementar el controllerParty
 #### GET
 #### POST
 #### PUT

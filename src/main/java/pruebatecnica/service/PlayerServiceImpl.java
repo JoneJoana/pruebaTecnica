@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import pruebatecnica.dao.IPlayerDAO;
-import pruebatecnica.dto.Party;
 import pruebatecnica.dto.Player;
 
 @Service
@@ -45,14 +44,14 @@ public class PlayerServiceImpl implements IPlayerService{
 		return iPlayerDao.findByNickname(nickname);
 	}
 
-	@Override
-	public List<Player> getFriends(Player player) {
-		return iPlayerDao.getFriends(player);
-	}
+//	@Override
+//	public List<Player> getFriends(Player player) {
+//		return iPlayerDao.getFriends(player);
+//	}
 
-	@Override
-	public List<Party> getParties(Player player) {
-		return iPlayerDao.getParties(player);
-	}
+//	@Override
+//	public List<Party> getParties(Player player) {
+//		return iPlayerDao.getParties(player);
+//	}
 
 }

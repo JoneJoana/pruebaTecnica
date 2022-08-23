@@ -31,9 +31,9 @@ public class Message {
 	@Temporal(TemporalType.DATE)
 	private Date dateSend;
 	
-	@ManyToOne	
-	@JoinColumn(name = "party")
-	private Party party;
+//	@ManyToOne	
+//	@JoinColumn(name = "party")
+//	private Party party;
 
 	
 	public Message() {}
@@ -77,12 +77,12 @@ public class Message {
 		this.dateSend = dateSend;
 	}
 	
-	public Party getParty() {
-		return party;
-	}
-
-	public void setParty(Party party) {
-		this.party = party;
-	}
+//	public Party getParty() {
+//		return party;
+//	}
+//
+//	public void setParty(Party party) {
+//		this.party = party;
+//	}
 	
 }

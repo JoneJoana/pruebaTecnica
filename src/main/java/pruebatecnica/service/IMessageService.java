@@ -3,7 +3,6 @@ package pruebatecnica.service;
 import java.util.List;
 
 import pruebatecnica.dto.Message;
-import pruebatecnica.dto.Party;
 import pruebatecnica.dto.Player;
 
 public interface IMessageService {
@@ -17,8 +16,8 @@ public interface IMessageService {
 
 	public void deleteMessage(int id);
 	
-	public List<Message> findPlayerFrom(Player player); 
+	public List<Message> findByFrom(Player player); 
 	
-	public List<Message> findByParty(Party party);
+	//public List<Message> findByParty(Party party);
 
 }

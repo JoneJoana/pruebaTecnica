@@ -34,8 +34,8 @@ public class MessageController {
 		return messageServiceImpl.findById(id);
 	}
 	
-	@GetMapping("/message/player/{id}")
-	public List<Message> findPlayerFrom(@PathVariable(name = "id") Player player) {
+	@GetMapping("/message/player/{playerFrom}")
+	public List<Message> findPlayerFrom(@PathVariable(name = "playerFrom") Player player) {
 		return messageServiceImpl.findByPlayerFrom(player);
 	}
 	

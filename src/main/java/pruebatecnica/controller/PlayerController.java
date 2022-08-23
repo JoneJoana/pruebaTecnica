@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import pruebatecnica.dto.Party;
 import pruebatecnica.dto.Player;
 import pruebatecnica.service.IPlayerService;
 
@@ -47,15 +48,20 @@ public class PlayerController {
 		return playerServiceImpl.findByNickname(nickname);
 	}
 	
-//	@GetMapping("/player/friends/{id}")
-//	public List<Player> getFriends(@PathVariable(name = "id") Player player) {
-//		return playerServiceImpl.getFriends(player);
-//	}
+	@GetMapping("/player/friends/{id}")
+	public List<Player> getFriends(@PathVariable(name = "id") Player player) {
+		return playerServiceImpl.getFriends(player);
+	}
 	
-//	@GetMapping("/player/parties/{id}")
-//	public List<Party> getParties(@PathVariable(name = "id") Player player) {
-//		return playerServiceImpl.getParties(player);
-//	}
+	@GetMapping("/player/parties/member/{id}")
+	public List<Party> getPartiesOwned(@PathVariable(name = "id") Player player) {
+		return playerServiceImpl.getPartiesMembered(player);
+	}
+	
+	@GetMapping("/player/parties/own/{id}")
+	public List<Party> getPartiesMembered(@PathVariable(name = "id") Player player) {
+		return playerServiceImpl.getPartiesOwned(player);
+	}
 	
 	@PostMapping("/player") // crear
 	public String savePlayer(@RequestBody Player player) {

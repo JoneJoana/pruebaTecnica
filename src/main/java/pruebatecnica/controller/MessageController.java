@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import pruebatecnica.dto.Message;
+import pruebatecnica.dto.Party;
 import pruebatecnica.dto.Player;
 import pruebatecnica.service.IMessageService;
 
@@ -35,13 +36,13 @@ public class MessageController {
 	
 	@GetMapping("/message/player/{player}")
 	public List<Message> findPlayerFrom(@PathVariable(name = "player") Player player) {
-		return messageServiceImpl.findByFrom(player);
+		return messageServiceImpl.findByPlayerFrom(player);
 	}
 	
-//	@GetMapping("/message/party/{party}")
-//	public List<Message> findfindByParty(@PathVariable(name = "party") Party party) {
-//		return messageServiceImpl.findByParty(party);
-//	}
+	@GetMapping("/message/party/{party}")
+	public List<Message> findfindByParty(@PathVariable(name = "party") Party party) {
+		return messageServiceImpl.findByParty(party);
+	}
 	
 	@DeleteMapping("/message/{id}")
 	public void deleteMessage(@PathVariable(name = "id") int id) {

@@ -48,21 +48,11 @@ public class PlayerController {
 		return playerServiceImpl.findByNickname(nickname);
 	}
 	
-	@GetMapping("/player/friends/{id}")
-	public List<Player> getFriends(@PathVariable(name = "id") Player player) {
-		return playerServiceImpl.getFriends(player);
-	}
-	
-	@GetMapping("/player/parties/member/{id}")
-	public List<Party> getPartiesOwned(@PathVariable(name = "id") Player player) {
-		return playerServiceImpl.getPartiesMembered(player);
-	}
-	
-	@GetMapping("/player/parties/own/{id}")
-	public List<Party> getPartiesMembered(@PathVariable(name = "id") Player player) {
-		return playerServiceImpl.getPartiesOwned(player);
-	}
-	
+//	@GetMapping("/player/friends/{id}")
+//	public List<Player> getFriends(@PathVariable(name = "id") Player player) {
+//		return playerServiceImpl.getFriends(player);
+//	}
+		
 	@PostMapping("/player") // crear
 	public String savePlayer(@RequestBody Player player) {
 		// validar datos que entran por body, que no se repita el nombre

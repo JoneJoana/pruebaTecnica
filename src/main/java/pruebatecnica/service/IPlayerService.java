@@ -22,10 +22,6 @@ public interface IPlayerService {
 	public Player findByNickname(String nickname);
 	
 	//devuelve lista de players amigos de ese player 
-	public List<Player> getFriends(Player player);
-	
-	public List<Party> getPartiesOwned(Player player);
-	
-	public List<Party> getPartiesMembered(Player player);
+	//public List<Player> getFriends(Player player);
 
 }

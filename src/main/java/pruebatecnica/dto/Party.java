@@ -48,7 +48,7 @@ public class Party {
 	@JoinTable(name = "member_parties", 
 			joinColumns = { @JoinColumn(name = "party") },
 			inverseJoinColumns = { @JoinColumn(name = "player") })
-	private List<Player> players;
+	private List<Player> partiesMembered;
 	
 		
 	//constructors
@@ -102,12 +102,12 @@ public class Party {
 		this.messages = messages;
 	}
 	
-	public List<Player> getMemberParties() {
-		return players;
+	public List<Player> getPartiesMembered() {
+		return partiesMembered;
 	}
 
-	public void setMemberParties(List<Player> players) {
-		this.players = players;
+	public void setPartiesMembered(List<Player> players) {
+		this.partiesMembered = players;
 	}
 	
 }

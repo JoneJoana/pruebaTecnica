@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import pruebatecnica.dao.IMessageDAO;
 import pruebatecnica.dto.Message;
+import pruebatecnica.dto.Party;
 import pruebatecnica.dto.Player;
 
 @Service
@@ -36,13 +37,13 @@ public class MessageServiceImpl implements IMessageService{
 	}
 
 	@Override
-	public List<Message> findByFrom(Player player) {
-		return iMessageDao.findByFrom(player);
+	public List<Message> findByPlayerFrom(Player player) {
+		return iMessageDao.findByPlayerFrom(player);
 	}
 
-//	@Override
-//	public List<Message> findByParty(Party party) {
-//		return iMessageDao.findByParty(party);
-//	}
+	@Override
+	public List<Message> findByParty(Party party) {
+		return iMessageDao.findByParty(party);
+	}
 
 }

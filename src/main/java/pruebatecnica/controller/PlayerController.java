@@ -48,13 +48,13 @@ public class PlayerController {
 		return playerServiceImpl.findByNickname(nickname);
 	}
 	
-	@GetMapping("/player/party/{party}")
-	public List<Player> findByParty(@PathVariable(name = "party") Party party) {
+	@GetMapping("/player/party")
+	public List<Player> findByParty(@RequestBody Party party) {
 		return playerServiceImpl.findByParties(party);
 	}
 	
-	@GetMapping("/player/friends/{id}")
-	public List<Player> getFriends(@PathVariable(name = "id") Player player) {
+	@GetMapping("/player/friends")
+	public List<Player> getFriends(@RequestBody Player player) {
 		return playerServiceImpl.findByFriendsWith(player);
 	}
 		

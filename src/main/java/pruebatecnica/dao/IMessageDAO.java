@@ -10,7 +10,7 @@ import pruebatecnica.dto.Player;
 
 public interface IMessageDAO extends JpaRepository<Message,Integer>{
 	
-	public List<Message> findByPlayerFrom(Player player); 
+	public List<Message> findByPlayerFrom(int idPlayer); 
 	
 	public List<Message> findByParty(Party party);
 		

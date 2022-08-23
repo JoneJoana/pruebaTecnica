@@ -17,7 +17,7 @@ public interface IMessageService {
 
 	public void deleteMessage(int id);
 	
-	public List<Message> findByPlayerFrom(Player player); 
+	public List<Message> findByPlayerFrom(int idPlayer); 
 	
 	public List<Message> findByParty(Party party);
 

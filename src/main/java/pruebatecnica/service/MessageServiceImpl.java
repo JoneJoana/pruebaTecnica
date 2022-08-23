@@ -37,8 +37,8 @@ public class MessageServiceImpl implements IMessageService{
 	}
 
 	@Override
-	public List<Message> findByPlayerFrom(Player player) {
-		return iMessageDao.findByPlayerFrom(player);
+	public List<Message> findByPlayerFrom(int idPlayer) {
+		return iMessageDao.findByPlayerFrom(idPlayer);
 	}
 
 	@Override

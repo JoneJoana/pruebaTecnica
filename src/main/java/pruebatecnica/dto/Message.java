@@ -38,11 +38,11 @@ public class Message {
 	
 	public Message() {}
 	
-	public Message(int id, Player from, String message, Date dateSend) {
+	public Message(int id, Player from, String message) {
 		this.id = id;
 		this.from = from;
 		this.message = message;
-		this.dateSend = dateSend;
+		this.dateSend = new Date();
 	}
 
 	public int getId() {
